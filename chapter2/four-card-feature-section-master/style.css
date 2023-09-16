@@ -1,0 +1,86 @@
+.container {
+  width: 90%;
+  height: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.h1bold {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.p1 {
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+.Supervisor,
+.Team-Builder,
+.Karma,
+.Calculator {
+  width: 300px; /* Adjust the width to your preference */
+  height: 300px; /* Adjust the height to your preference */
+}
+
+.Supervisor {
+  position: absolute;
+  top: 35%;
+  left: 26%;
+  text-align: center;
+  box-shadow: 3px 9px 25px -7px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 3px 9px 25px -7px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 3px 9px 25px -7px rgba(0, 0, 0, 0.58);
+  border-top: 25px solid hsl(180, 62%, 55%);
+  border-radius: 15px;
+}
+
+.Team-Builder {
+  position: absolute;
+  top: 20%;
+  right: 38%;
+  text-align: center;
+  box-shadow: 3px 9px 25px -7px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 3px 9px 25px -7px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 3px 9px 25px -7px rgba(0, 0, 0, 0.58);
+  font-weight: 600;
+  border-top: 25px solid hsl(0, 78%, 62%);
+  border-radius: 15px;
+}
+
+.Karma {
+  position: absolute;
+  bottom: 0%;
+  right: 38%;
+  text-align: center;
+  box-shadow: 3px 9px 25px -7px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 3px 9px 25px -7px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 3px 9px 25px -7px rgba(0, 0, 0, 0.58);
+  font-weight: 600;
+  border-top: 25px solid hsl(64, 71%, 64%);
+  border-radius: 15px;
+}
+
+.Calculator {
+  position: absolute;
+  top: 35%;
+  right: 20%;
+  text-align: center;
+  box-shadow: 3px 9px 25px -7px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 3px 9px 25px -7px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 3px 9px 25px -7px rgba(0, 0, 0, 0.58);
+  font-weight: 600;
+  border-top: 25px solid hsl(180, 36%, 35%);
+  border-radius: 15px;
+}

@@ -1,0 +1,32 @@
+.container {
+  width: 90%;
+  height: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+}
+.ads {
+  width: 200px;
+  height: 50px;
+  position: relative;
+  top: 15%;
+  left: 2%;
+}
+.ads h1 {
+  color: hsl(300, 43%, 22%);
+  font-weight: 900;
+}
+.rev1,
+.rev2,
+.rev3 {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  transform: translate(-20%, -20%);
+  top: 20%;
+  padding: 10%;
+  left: 0%;
+  background-color: hsl(333, 80%, 67%);
+}
