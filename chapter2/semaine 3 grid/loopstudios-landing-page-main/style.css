@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  background-image: url(images/desktop/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 30px 40px;
+  height: 80px;
+  justify-content: space-between;
+  background-color: #fff;
+  top: 0;
+  background-image: url(images/desktop/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+.rightbar {
+  position: relative;
+  right: 250px;
+  padding-bottom: 25px;
+  display: flex;
+  gap: 25px;
+}
+.rightbar a {
+  color: inherit;
+  text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+  transition: text-decoration-color 300ms;
+  border-bottom: 3px;
+  padding-bottom: 5px;
+}
+
+.rightbar a:hover {
+  border-bottom: 3px solid #ffffff;
+  padding-bottom: 5px;
+}
+.bigtext {
+  width: 550px;
+  margin-bottom: 250px;
+  display: flex;
+  position: relative;
+  left: 150px;
+  align-content: center;
+  justify-content: center;
+  font-size: 50px;
+  border: 3px solid #ffffff;
+}
+.bigtext p {
+  color: rgb(255 255 255);
+  font-weight: 50;
+  font-size: larger;
+  text-align: left;
+}
+.leader {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.text {
+  width: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  top: 250px;
+  right: 500px;
+}
+.leader img {
+  position: relative;
+  left: 250px;
+  top: 150px;
+  width: 600px;
+  height: auto;
+  -webkit-clip-path: polygon(
+    20% 0%,
+    100% 0,
+    100% 33%,
+    69% 33%,
+    69% 100%,
+    0 100%,
+    0 0
+  );
+  clip-path: polygon(20% 0%, 100% 0, 100% 33%, 69% 33%, 69% 100%, 0 100%, 0 0);
+}
+.grider {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 550px);
+  position: relative;
+  top: 350px;
+  left: 250px;
+  gap: 25px;
+}
+.toptext {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.deep {
+  background-image: url(images/desktop/image-deep-earth.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.night {
+  background-image: url(images/desktop/image-night-arcade.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.soccer {
+  background-image: url(images/desktop/image-soccer-team.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.the {
+  background-image: url(images/desktop/image-grid.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.from {
+  background-image: url(images/desktop/image-from-above.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.pocket {
+  background-image: url(images/desktop/image-pocket-borealis.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.thecu {
+  background-image: url(images/desktop/image-curiosity.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.make {
+  background-image: url(images/desktop/image-fisheye.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
