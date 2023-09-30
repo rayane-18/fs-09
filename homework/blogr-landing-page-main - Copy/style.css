@@ -1,0 +1,306 @@
+/* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  background: hsl(0, 26%, 96%);
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url(images/bg-pattern-intro.svg);
+  background-position: center;
+  background-size: 150%;
+  padding: 4rem 10rem;
+  border-bottom-left-radius: 6rem;
+  background-color: hsl(353, 100%, 62%);
+  background-repeat: no-repeat;
+}
+
+.header .navigation {
+  display: flex;
+  align-items: center;
+}
+
+.header .navigation .site-nav li {
+  margin-right: 1.5rem;
+  list-style: none;
+  position: relative;
+}
+
+.header .navigation .site-nav li a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.header .navigation .site-nav li a:hover {
+  text-decoration: underline;
+}
+
+.header .navigation .site-nav li img {
+  margin-left: 0.5rem;
+  transition: 0.5s;
+}
+
+.header .navigation .site-nav li:hover img {
+  transform: rotate(-180deg);
+}
+
+.header .header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.header .header-content h1 {
+  font-size: 3.5rem;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 1rem;
+  font-family: "Overpass", sans-serif;
+}
+
+.header .header-content p {
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 3rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+.header .header-content .header-content-links li a {
+  text-decoration: none;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.header .header-content .header-content-links li .start {
+  background: hsl(0, 0%, 100%);
+  color: hsl(353, 100%, 62%);
+  border-radius: 2rem;
+  transition: 0.5s;
+}
+
+.header .header-content .header-content-links li .start:hover {
+  background: hsl(355, 100%, 74%);
+  color: hsl(0, 0%, 100%);
+}
+
+.header .header-content .header-content-links li .learn {
+  background: transparent;
+  color: hsl(0, 0%, 100%);
+  border-radius: 2rem;
+  transition: 0.5s;
+  border: 1px solid hsl(0, 0%, 100%);
+}
+
+.header .header-content .header-content-links li .learn:hover {
+  background: hsl(0, 0%, 100%);
+  color: hsl(355, 100%, 74%);
+}
+
+/* Blogr Description */
+.description {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 10rem 0 3rem 10rem;
+  background: hsl(0, 26%, 96%);
+  z-index: 2;
+}
+
+.description h2 {
+  font-size: 2.5rem;
+  color: hsl(208, 49%, 24%);
+  text-align: center;
+  margin-bottom: -4rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+}
+
+.description .description-content .description-content-leftcolumn h3 {
+  font-size: 1.8rem;
+  color: hsl(208, 49%, 24%);
+  margin-bottom: 2.5rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+}
+
+.description .description-content .description-content-leftcolumn p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+}
+
+/* Services */
+.services {
+  width: 100%;
+  padding: 8rem 10rem;
+  position: relative;
+  background: hsl(237, 17%, 21%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top-right-radius: 6rem;
+  border-bottom-left-radius: 6rem;
+}
+
+.services .services-rightcolumn h4 {
+  font-size: 2.3rem;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 2rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+}
+
+.services .services-rightcolumn p {
+  font-size: 1.1rem;
+  color: hsl(0, 0%, 100%);
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+  line-height: 1.9rem;
+}
+
+/* Features */
+.features {
+  width: 100%;
+  position: relative;
+  padding: 15rem 10rem 15rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: hsl(0, 26%, 96%);
+  z-index: 2;
+}
+
+.features .features-leftcolumn h5 {
+  font-size: 1.8rem;
+  color: hsl(208, 49%, 24%);
+  margin-bottom: 1.5rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+}
+
+.features .features-leftcolumn p {
+  font-size: 0.95rem;
+  color: hsl(208, 49%, 24%);
+  margin-bottom: 3rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+  line-height: 2.1rem;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  padding: 4rem 10rem 6rem;
+  background: hsl(240, 10%, 16%);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border-top-right-radius: 6rem;
+}
+
+footer .footer-box h6 {
+  font-size: 1rem;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 2rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+
+footer .footer-box ul li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+footer .footer-box ul li a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-size: 0.9rem;
+  transition: 0.3s;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+footer .footer-box ul li a:hover {
+  color: hsl(355, 100%, 74%);
+}
+
+/* Responsive styles (for simplicity, just basic styles without mobile-specific considerations) */
+@media screen and (max-width: 768px) {
+  .header .navigation {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header .navigation .site-nav li {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .header .navigation .site-nav li:last-child {
+    margin-bottom: 2rem;
+  }
+
+  .header .navigation .site-nav li img {
+    display: none;
+  }
+
+  .header .header-content {
+    text-align: left;
+  }
+
+  .header .header-content .header-content-links {
+    margin-top: 2rem;
+  }
+
+  .description {
+    padding: 10rem 0 3rem 0;
+  }
+
+  .description h2 {
+    margin-bottom: 2rem;
+  }
+
+  .description .description-content .description-content-leftcolumn h3 {
+    margin-bottom: 1.5rem;
+  }
+
+  .services {
+    padding: 8rem 0;
+  }
+
+  .services .services-rightcolumn h4 {
+    margin-bottom: 1.5rem;
+  }
+
+  .features {
+    padding: 15rem 0;
+  }
+
+  .features .features-leftcolumn h5 {
+    margin-bottom: 1rem;
+  }
+
+  footer {
+    padding: 4rem 0 6rem;
+  }
+}

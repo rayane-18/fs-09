@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&family=Outfit:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-color: rgb(243, 234, 227);
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 70%;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.left-side img {
+  max-width: 100%; /* Ensure the image doesn't exceed the container width */
+  height: 100%; /* Maintain aspect ratio */
+}
+.right-side {
+  width: 50%;
+  padding: 20px;
+  text-align: left;
+}
+.parfume h1 {
+  margin-top: 5px;
+  font-size: 10px;
+  margin-bottom: px;
+  color: rgba(108, 104, 104, 0.639);
+}
+.parfume {
+  margin-bottom: 15px;
+}
+.right-side h1 {
+  font-size: 34px;
+  font-weight: 650;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+.right-side p {
+  font-size: 18px;
+  text-align: left;
+  margin-top: 15px;
+  color: rgb(97, 97, 97);
+}
+.pricing {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+}
+.deal h1 {
+  font-size: 45px;
+  font-weight: bold;
+  margin-right: 10px;
+  color: rgb(61, 129, 104);
+}
+.no-remise h1 {
+  font-size: 20px;
+  margin-top: 15px;
+  margin-right: 110px;
+  text-decoration: line-through;
+  color: rgb(114, 114, 114);
+}
+.container button {
+  padding: 15px 90px;
+  background-color: rgb(61, 129, 104);
+  color: white;
+  font-size: 15px;
+  border: none;
+  white-space: nowrap;
+  margin-top: 25px;
+  margin-left: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.container button:hover {
+  background-color: rgb(40, 84, 68);
+}

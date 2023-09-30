@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: absolute;
+}
+.container {
+  background-color: blue;
+  width: 45%;
+  height: 35vh;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  gap: 25;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 25px 25px 25px;
+}
+.person {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+}
+.right h1 {
+  font-size: 22px;
+  padding: 5px 5px 5px 5px;
+}
+.right p {
+  font-size: 14px;
+  padding: 5px 5px 5px 5px;
+}
+.right img {
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+}
+.text p {
+  font-size: 13px;
+  padding-bottom: 20px;
+}
+.text h3 {
+  font-size: 16 px;
+}
+.left img {
+  width: auto;
+  height: 35vh;
+}

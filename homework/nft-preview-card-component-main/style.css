@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+body {
+  background-color: rgb(23, 23, 124);
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 27%;
+  height: 80%;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(0, 75, 132);
+}
+.image img {
+  padding-top: 15px;
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+}
+.pricedate {
+  display: flex;
+  justify-content: space-between;
+}
+.eq {
+  color: white;
+  font-size: 15px;
+}
+.eq p {
+  color: rgb(121, 144, 178);
+}
+.price,
+.date {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+.date {
+  padding-left: 90px;
+  color: rgb(109, 160, 221);
+}
+.price {
+  padding-right: 70px;
+  color: rgb(39, 223, 255);
+}
+
+.price img,
+.date img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+.container h1 span {
+  color: whitesmoke;
+}
+.ender {
+  margin-top: 5px;
+  font-size: 35;
+  margin-bottom: 15px;
+  color: rgb(121, 144, 178);
+}
+.h_line {
+  border-bottom: 1px solid rgb(129, 129, 128);
+  width: 330px;
+  height: 2px;
+  margin: auto;
+}
