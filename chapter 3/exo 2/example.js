@@ -53,13 +53,18 @@ function evalNumbers(operation, num1, num2) {
   } else if (operation == "multiply") {
     return "multiply is " + num1 * num2;
   } else if (operation == "divide") {
-    return "division is " + num1 / num2;
+    if (num2 != 0) {
+      return "division is " + num1 / num2;
+    } else {
+      return "cannot divide by 0";
+    }
   } else if (operation == "modulus") {
     return "modulus is " + (num1 % num2);
   } else {
     return "Invalid operation";
   }
 }
+//7
 function findGrade(grade) {
   if (grade > 100 || grade < 0) {
     return "Invalid mark";
@@ -79,3 +84,20 @@ function findGrade(grade) {
     return "Student has failed";
   }
 }
+//8 with switch
+//Find the a number is present in given range
+//Function checkInRange() finds if the given number is within the provided start and end range using >=, <= and && operators in JavaScript.
+//checkInRange(startnum,endnum,num) {
+//  switch (true) {
+//    case num >= startnum && num <= endnum:
+//      return "present in given range"
+//    case num <= startnum && num >= endnum:
+//      return "present in given range"
+//    default:
+//      break;
+//  }
+//}
+//Print “Between the range” if num is between start and end values
+//Else Print “Outside the range” since num is outside start and end values.
+//9     remove all the elements after #
+// www.facebook.com#login
