@@ -27,6 +27,7 @@ const App = () => {
       PASSWORD: Password,
     });
   };
+  console.log(FreeTrial);
   return (
     <div className="container">
       <div className="Left">
