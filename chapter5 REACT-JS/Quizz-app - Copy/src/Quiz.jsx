@@ -1,52 +1,165 @@
 import React, { useState } from "react";
-import { questions } from "./Questions.js";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import quizQuestions from "./Questions";
+import FinalScore from "./FinalScore";
 
-const Quizz = () => {
-  const [correct, setCorrect] = useState("");
+const quizzes = ["HTML", "CSS", "JavaScript", "Accessibility"];
+
+function Quiz() {
+  const [currentQuiz, setCurrentQuiz] = useState(null);
   const [score, setScore] = useState(0);
-  const [active, setActive] = useState(false);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [allQuestionsAnswered, setAllQuestionsAnswered] = useState(false);
 
-  console.log(correct);
+  const handleQuizSelection = (selectedQuiz) => {
+    setCurrentQuiz(selectedQuiz);
+    setScore(0);
+    setCurrentQuestionIndex(0);
+    setAllQuestionsAnswered(false);
+  };
 
-  const getCorrecAnswer = () => {
-    let answer = "";
-    questions.map((q) => {
-      answer = q.answer;
-    });
+  const handleAnswerClick = (selectedAnswer) => {
+    const currentQuestion = quizQuestions[currentQuiz][currentQuestionIndex];
 
-    if (correct === answer) {
-      setScore(score + 10);
+    if (selectedAnswer === currentQuestion.correctAnswer) {
+      setScore(score + 1);
+    }
+
+    if (currentQuestionIndex + 1 < quizQuestions[currentQuiz].length) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    } else {
+      setAllQuestionsAnswered(true);
     }
   };
 
-  return (
-    <div>
-      <h1>Quiz</h1>
-      <h1>{score}</h1>
-      {questions.map((q) => {
-        return (
-          <div className="q">
-            <h1>{q.question}</h1>
-            <div className="choices">
-              {q.choices.map((c) => {
-                return (
-                  <div className="inputs" key={c}>
-                    <h1>{c}</h1>
-                    <input
-                      type="radio"
-                      value={c}
-                      onClick={() => setCorrect(c)}
-                    />
-                  </div>
-                );
-              })}
-            </div>
-            <button onClick={getCorrecAnswer}>Submit</button>
-          </div>
-        );
-      })}
-    </div>
-  );
-};
+  const renderQuizContent = () => {
+    if (allQuestionsAnswered) {
+      return (
+        <FinalScoreContainer>
+          <h1>Final Score</h1>
+          <Score>
+            <p>
+              {score} out of {quizQuestions[currentQuiz].length}
+            </p>
+          </Score>
+          <FinalScore totalScore={score} />
+        </FinalScoreContainer>
+      );
+    }
 
-export default Quizz;
+    const currentQuestion = quizQuestions[currentQuiz][currentQuestionIndex];
+
+    return (
+      <QuizContainer>
+        <h1>{currentQuiz} Quiz</h1>
+        <Question>
+          <p>{currentQuestion.question}</p>
+        </Question>
+        <Options>
+          {currentQuestion.options.map((option, index) => (
+            <button
+              key={index}
+              onClick={() => handleAnswerClick(option)}
+              disabled={allQuestionsAnswered}
+            >
+              {option}
+            </button>
+          ))}
+        </Options>
+        <Score>
+          <p>Score: {score}</p>
+        </Score>
+      </QuizContainer>
+    );
+  };
+
+  return (
+    <AppContainer>
+      <LandingPage>
+        <h1>Choose a Quiz</h1>
+        <QuizOptions>
+          {quizzes.map((quiz) => (
+            <button key={quiz} onClick={() => handleQuizSelection(quiz)}>
+              {quiz}
+            </button>
+          ))}
+        </QuizOptions>
+      </LandingPage>
+      {currentQuiz && <>{renderQuizContent()}</>}
+    </AppContainer>
+  );
+}
+
+const AppContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+`;
+
+const LandingPage = styled.div`
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 10px;
+    cursor: pointer;
+    margin: 5px;
+  }
+`;
+
+const QuizOptions = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
+
+const QuizContainer = styled.div`
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+`;
+
+const Question = styled.div`
+  margin-bottom: 20px;
+`;
+
+const Options = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  button {
+    padding: 10px;
+    cursor: pointer;
+  }
+`;
+
+const Score = styled.div`
+  margin-top: 20px;
+`;
+
+const FinalScoreContainer = styled.div`
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+`;
+
+export default Quiz;
